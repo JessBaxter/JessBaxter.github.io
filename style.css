@@ -1,6 +1,12 @@
 :root {
   --clr-100: hsl(0, 0%, 100%);
   --clr-900: hsl(0, 0%, 0%);
+
+  --clr-primary: #000e33;
+  --clr-secondary: #ffa600;
+  --clr-accent: #016fb9;
+
+  --link: rgb(183, 0, 255);
 }
 
 body {
@@ -11,7 +17,7 @@ body {
 
 header,
 footer {
-  background-color: var(--clr-900);
+  background-color: var(--clr-primary);
   padding: 1rem;
 }
 
@@ -34,14 +40,27 @@ nav ul {
   flex-direction: row;
 }
 
+li {
+  list-style: none;
+  margin-left: 1rem;
+}
+
+a {
+  color: var(--clr-accent);
+}
+
 nav ul li,
 nav ul li > * {
   padding: 1rem;
-  list-style: none;
+  color: var(--clr-100);
 }
 
-nav a:hover {
-  color: orange;
+nav a {
+  color: var(--clr-100);
+}
+
+a:hover {
+  color: var(--clr-secondary);
 }
 
 main {
@@ -77,9 +96,21 @@ h3:not(h2 + h3) {
   margin: 2rem 0;
 }
 
-/* Format links */
-main a {
-  color: blue;
+table {
+  text-align: left;
+  margin: 2rem 0;
+}
+
+th {
+  background-color: var(--clr-secondary);
+  color: var(--clr-900);
+  padding: 1rem;
+}
+
+tr,
+td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--clr-secondary);
 }
 
 /* Classes ===================== */
@@ -90,7 +121,22 @@ main a {
 
 .img {
   margin: 2rem 0;
-  max-width: 80vw;
+}
+
+/* Image subtext */
+aside > img + span.subtext {
+  display: block;
+  margin-top: 1.5rem;
+}
+
+.half {
+  display: flex;
+  flex-direction: row;
+  width: 80vw;
+}
+
+.half > div {
+  margin-right: 4rem;
 }
 
 @media (max-width: 767px) {
@@ -105,6 +151,16 @@ main a {
   h1 {
     font-size: 2rem;
     text-transform: uppercase;
+  }
+
+  .half {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+  }
+
+  .half > div {
+    margin-right: auto;
   }
 }
 
