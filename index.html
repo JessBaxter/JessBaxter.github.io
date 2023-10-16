@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>G'Day!</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  </head>
+  <body>
+    <div id="markdown-content"></div>
+
+    <script>
+      // Function to fetch and render Markdown content
+      function renderMarkdown() {
+        const markdownContainer = document.getElementById("markdown-content");
+
+        // Fetch the README.md file
+        fetch("README.md")
+          .then((response) => response.text())
+          .then((markdown) => {
+            // Convert Markdown to HTML using Marked
+            const htmlContent = marked(markdown);
+
+            // Set the HTML content in the container
+            markdownContainer.innerHTML = htmlContent;
+          });
+      }
+
+      // Call the function to render Markdown content
+      renderMarkdown();
+    </script>
+  </body>
+</html>
