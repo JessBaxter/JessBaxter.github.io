@@ -98,19 +98,19 @@ h3:not(h2 + h3) {
 
 table {
   text-align: left;
-  margin: 2rem 0;
+  margin: 2rem 0 !important;
 }
 
 th {
-  background-color: var(--clr-secondary);
-  color: var(--clr-900);
-  padding: 1rem;
+  background-color: var(--clr-secondary) !important;
+  color: var(--clr-900) !important;
+  padding: 1rem !important;
 }
 
 tr,
 td {
-  padding: 1rem;
-  border-bottom: 1px solid var(--clr-secondary);
+  padding: 1rem !important;
+  border-bottom: 1px solid var(--clr-secondary) !important;
 }
 
 /* Classes ===================== */
@@ -139,6 +139,7 @@ aside > img + span.subtext {
   margin-right: 4rem;
 }
 
+/* Media queries ====================== */
 @media (max-width: 767px) {
   nav {
     flex-direction: column;
