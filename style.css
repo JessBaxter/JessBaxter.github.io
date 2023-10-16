@@ -36,8 +36,12 @@ nav ul {
 
 nav ul li,
 nav ul li > * {
-  margin: 1rem;
+  padding: 1rem;
   list-style: none;
+}
+
+nav a:hover {
+  color: orange;
 }
 
 main {
